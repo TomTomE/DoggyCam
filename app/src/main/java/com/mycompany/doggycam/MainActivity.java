@@ -1,18 +1,55 @@
 package com.mycompany.doggycam;
 
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
+
+    Button mainBut1,mainBut2,mainBut3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mainBut1 = (Button) findViewById(R.id.mainBut1);
+        mainBut1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, RegActivity.class);
+                startActivity(i);
+            }
+        });
+
+        mainBut2 = (Button) findViewById(R.id.mainBut2);
+        mainBut2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, RegActivity.class);
+                startActivity(i);
+            }
+        });
+
+        mainBut3 = (Button) findViewById(R.id.mainBut3);
+        mainBut3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, RegActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
